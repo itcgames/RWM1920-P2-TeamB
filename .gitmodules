@@ -1,3 +1,12 @@
 [submodule "RWM1920-C00217717"]
 	path = RWM1920-C00217717
 	url = https://github.com/itcgames/RWM1920-C00217717.git
+[submodule "RWM1920-C00213855"]
+	path = RWM1920-C00213855
+	url = https://github.com/itcgames/RWM1920-C00213855
+[submodule "RWM1920-C00198551"]
+	path = RWM1920-C00198551
+	url = https://github.com/itcgames/RWM1920-C00198551
+[submodule "RWM1920-C00220868"]
+	path = RWM1920-C00220868
+	url = https://github.com/itcgames/RWM1920-C00220868
