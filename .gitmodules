@@ -1,0 +1,6 @@
+[submodule "P2_MainGame_TeamB/Assets/Plugins/Submodules/RWM1920-C00220868"]
+	path = P2_MainGame_TeamB/Assets/Plugins/Submodules/RWM1920-C00220868
+	url = https://github.com/itcgames/RWM1920-C00220868
+[submodule "P2_MainGame_TeamB/Assets/Plugins/Submodules/RWM1920-C00217820"]
+	path = P2_MainGame_TeamB/Assets/Plugins/Submodules/RWM1920-C00217820
+	url = https://github.com/itcgames/RWM1920-C00217820
