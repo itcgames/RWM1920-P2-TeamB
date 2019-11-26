@@ -7,3 +7,9 @@
 [submodule "P2_MainGame_TeamB/Assets/Plugins/Submodules/RWM1920-C00213855"]
 	path = P2_MainGame_TeamB/Assets/Plugins/Submodules/RWM1920-C00213855
 	url = https://github.com/itcgames/RWM1920-C00213855
+[submodule "P2_MainGame_TeamB/Assets/Plugins/Submodules/RWM1920-C00217717"]
+	path = P2_MainGame_TeamB/Assets/Plugins/Submodules/RWM1920-C00217717
+	url = https://github.com/itcgames/RWM1920-C00217717
+[submodule "P2_MainGame_TeamB/Assets/Plugins/Submodules/RWM1920-C00198551"]
+	path = P2_MainGame_TeamB/Assets/Plugins/Submodules/RWM1920-C00198551
+	url = https://github.com/itcgames/RWM1920-C00198551
