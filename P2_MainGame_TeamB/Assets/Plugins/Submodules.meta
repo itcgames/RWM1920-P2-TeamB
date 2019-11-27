@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:P2_MainGame_TeamB/Assets/Plugins/Submodules.meta
+guid: 7097e290a31997e4c88cdad6765afc55
+=======
+guid: e562a5f589f2dd3498f63bb00513137a
+>>>>>>> master:P2_MainGame_TeamB/Assets/Materials.meta
+=======
 guid: 9beae452795f402459f7db2ddb77cb62
+>>>>>>> master
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
