@@ -12,9 +12,9 @@ TagManager:
   - PressurePlate
   - TestCube
   - Floor
-  - wire
   - balloon
-  - ball
+  - magnet
+  - wire
   layers:
   - Default
   - TransparentFX
