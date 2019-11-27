@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:P2_MainGame_TeamB/Assets/Scripts/DestroyObject.cs.meta
 guid: 78cb13059063c7d43a87681116f39d18
+=======
+guid: f9414b45f2f23ad40bc610c8b32ef7dc
+>>>>>>> master:P2_MainGame_TeamB/Assets/Scripts/ButtonActivation.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:P2_MainGame_TeamB/Assets/Texture/MAGNET.png.meta
 guid: dd05a613e1e313443b046f4295b81f0c
+=======
+guid: 83ee4c1858df49443824a4685952ba4c
+>>>>>>> master:P2_MainGame_TeamB/Assets/Materials/Button.png.meta
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -75,7 +79,11 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
+<<<<<<< HEAD:P2_MainGame_TeamB/Assets/Texture/MAGNET.png.meta
     spriteID: 3a561abc84c58fb4f88867dd56d7de2b
+=======
+    spriteID: 995c4e4219b6d4b4991a4daf1ca91c5b
+>>>>>>> master:P2_MainGame_TeamB/Assets/Materials/Button.png.meta
     vertices: []
     indices: 
     edges: []

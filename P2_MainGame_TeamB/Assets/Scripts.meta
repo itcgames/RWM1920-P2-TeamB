@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:P2_MainGame_TeamB/Assets/Scripts.meta
 guid: 96a2acad9f2c75143add033ddfa9f515
+=======
+guid: 8470e03c8e7bcc0428cf10b1763b2002
+>>>>>>> master:P2_MainGame_TeamB/Assets/Scripts.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

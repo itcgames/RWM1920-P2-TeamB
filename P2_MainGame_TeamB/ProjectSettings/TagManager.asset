@@ -13,8 +13,8 @@ TagManager:
   - TestCube
   - Floor
   - balloon
-  - wire
   - magnet
+  - wire
   layers:
   - Default
   - TransparentFX

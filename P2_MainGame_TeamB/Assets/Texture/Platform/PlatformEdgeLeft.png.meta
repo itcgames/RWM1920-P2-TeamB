@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:P2_MainGame_TeamB/Assets/Texture/Platform/PlatformEdgeLeft.png.meta
 guid: a0b6d55c35c6fe148b2aac86bfdc4a94
+=======
+guid: 5adc3b8ddda3b9942a5a67c3b63e8e21
+>>>>>>> master:P2_MainGame_TeamB/Assets/Materials/goal.png.meta
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -75,7 +79,11 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
+<<<<<<< HEAD:P2_MainGame_TeamB/Assets/Texture/Platform/PlatformEdgeLeft.png.meta
     spriteID: 9a543d2d27896d34799a1c6e3de5c7f3
+=======
+    spriteID: 2ab9dafcd66df3442a41bad390730100
+>>>>>>> master:P2_MainGame_TeamB/Assets/Materials/goal.png.meta
     vertices: []
     indices: 
     edges: []
