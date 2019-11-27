@@ -5,8 +5,19 @@ using UnityEngine.UI;
 
 public class SceneManager : MonoBehaviour
 {
-    public GameObject bomb;
-    public Button myButton;
+    public GameObject m_balloon;
+    public GameObject m_bomb;
+    public GameObject m_tb;
+    public GameObject m_pp;
+    public GameObject m_tramp;
+    public GameObject m_fan;
+    public Button m_ballonBtn;
+    public Button m_bombBtn;
+    public Button m_tbBtn;
+    public Button m_ppBtn;
+    public Button m_trampBtn;
+    public Button m_fanBtn;
+
 
     private bool m_isHeldDown;
     private float m_startPosX;
@@ -14,9 +25,13 @@ public class SceneManager : MonoBehaviour
     Vector3 m_mousePos;
     void OnEnable()
     {
-
-        myButton.onClick.AddListener(TaskOnClick);//adds a listener for when you click the button
-
+        //Register Button Events
+        m_ballonBtn.onClick.AddListener(() => buttonCallBack(m_ballonBtn));
+        m_bombBtn.onClick.AddListener(() => buttonCallBack(m_bombBtn));
+        m_tbBtn.onClick.AddListener(() => buttonCallBack(m_tbBtn));
+        m_ppBtn.onClick.AddListener(() => buttonCallBack(m_ppBtn));
+        m_trampBtn.onClick.AddListener(() => buttonCallBack(m_trampBtn));
+        m_fanBtn.onClick.AddListener(() => buttonCallBack(m_fanBtn));
     }
     // Update is called once per frame
     void Update()
@@ -49,16 +64,46 @@ public class SceneManager : MonoBehaviour
     {
         m_isHeldDown = t_heldDown;
     }
-    public void AddObject()
+    private void buttonCallBack(Button buttonPressed)
     {
-        Instantiate(bomb);
-        m_isHeldDown = true;
+        if (buttonPressed == m_ballonBtn)
+        {
+            Debug.Log("Clicked: " + m_ballonBtn.name);
+            Instantiate(m_balloon);
+        }
 
-    }
+        if (buttonPressed == m_bombBtn)
+        {
+            Debug.Log("Clicked: " + m_bombBtn.name);
+            Instantiate(m_bomb);
+ 
+        }
 
-    void TaskOnClick()
-    {
-        AddObject();
-        Debug.Log("You have clicked the button!");
+        if (buttonPressed == m_tbBtn)
+        {
+            Debug.Log("Clicked: " + m_tbBtn.name);
+            Instantiate(m_tb);
+
+        }
+
+
+        if (buttonPressed == m_ppBtn)
+        {
+            Debug.Log("Clicked: " + m_ppBtn.name);
+            Instantiate(m_pp);
+
+        }
+        if (buttonPressed == m_trampBtn)
+        {
+            Debug.Log("Clicked: " + m_trampBtn.name);
+            Instantiate(m_tramp);
+
+        }
+        if (buttonPressed == m_fanBtn)
+        {
+            Debug.Log("Clicked: " + m_fanBtn.name);
+            Instantiate(m_fan);
+
+        }
     }
 }
