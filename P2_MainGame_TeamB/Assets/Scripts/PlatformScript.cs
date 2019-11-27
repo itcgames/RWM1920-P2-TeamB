@@ -97,19 +97,11 @@ public class PlatformScript : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
-    }
-
     private void OnCollisionStay2D(Collision2D collision)
     {
-        collision.rigidbody.velocity = movement;
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        
+        Vector2 tempVelocity = collision.rigidbody.velocity;
+        tempVelocity.x = movement.x;
+        collision.rigidbody.velocity = tempVelocity;
     }
 
     public void SetActive(bool t_activate)
