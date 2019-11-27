@@ -17,21 +17,30 @@ public class SceneManager : MonoBehaviour
     public Button m_ppBtn;
     public Button m_trampBtn;
     public Button m_fanBtn;
-
-
+    public Button m_startButton;
+    public Button m_resetButton;
     private bool m_isHeldDown;
     private float m_startPosX;
     private float m_startPosY;
     Vector3 m_mousePos;
+
+    
     void OnEnable()
     {
+       
         //Register Button Events
-        m_ballonBtn.onClick.AddListener(() => buttonCallBack(m_ballonBtn));
-        m_bombBtn.onClick.AddListener(() => buttonCallBack(m_bombBtn));
-        m_tbBtn.onClick.AddListener(() => buttonCallBack(m_tbBtn));
-        m_ppBtn.onClick.AddListener(() => buttonCallBack(m_ppBtn));
-        m_trampBtn.onClick.AddListener(() => buttonCallBack(m_trampBtn));
-        m_fanBtn.onClick.AddListener(() => buttonCallBack(m_fanBtn));
+        m_ballonBtn.onClick.AddListener(() => ButtonCallBack(m_ballonBtn));
+        m_bombBtn.onClick.AddListener(() => ButtonCallBack(m_bombBtn));
+        m_tbBtn.onClick.AddListener(() => ButtonCallBack(m_tbBtn));
+        m_ppBtn.onClick.AddListener(() => ButtonCallBack(m_ppBtn));
+        m_trampBtn.onClick.AddListener(() => ButtonCallBack(m_trampBtn));
+        m_fanBtn.onClick.AddListener(() => ButtonCallBack(m_fanBtn));
+        m_startButton.onClick.AddListener(() => ButtonCallBack(m_startButton));
+        m_resetButton.onClick.AddListener(() => ButtonCallBack(m_resetButton));
+    }
+    void Start()
+    {
+
     }
     // Update is called once per frame
     void Update()
@@ -64,45 +73,59 @@ public class SceneManager : MonoBehaviour
     {
         m_isHeldDown = t_heldDown;
     }
-    private void buttonCallBack(Button buttonPressed)
+
+    private void ButtonCallBack(Button t_buttonPressed)
     {
-        if (buttonPressed == m_ballonBtn)
+        if (t_buttonPressed == m_ballonBtn)
         {
             Debug.Log("Clicked: " + m_ballonBtn.name);
             Instantiate(m_balloon);
+            
         }
 
-        if (buttonPressed == m_bombBtn)
+        if (t_buttonPressed == m_bombBtn)
         {
             Debug.Log("Clicked: " + m_bombBtn.name);
             Instantiate(m_bomb);
  
         }
 
-        if (buttonPressed == m_tbBtn)
+        if (t_buttonPressed == m_tbBtn)
         {
             Debug.Log("Clicked: " + m_tbBtn.name);
             Instantiate(m_tb);
 
         }
 
-
-        if (buttonPressed == m_ppBtn)
+        if (t_buttonPressed == m_ppBtn)
         {
             Debug.Log("Clicked: " + m_ppBtn.name);
             Instantiate(m_pp);
 
         }
-        if (buttonPressed == m_trampBtn)
+        if (t_buttonPressed == m_trampBtn)
         {
             Debug.Log("Clicked: " + m_trampBtn.name);
             Instantiate(m_tramp);
 
         }
-        if (buttonPressed == m_fanBtn)
+        if (t_buttonPressed == m_fanBtn)
         {
             Debug.Log("Clicked: " + m_fanBtn.name);
             Instantiate(m_fan);
+
+        }
+        if (t_buttonPressed == m_startButton)
+        {
+            
+            Debug.Log("Clicked: " + m_startButton.name);
+
+        }
+        if (t_buttonPressed == m_resetButton)
+        {
+
+            Debug.Log("Clicked: " + m_resetButton.name);
+            Destroy(m_balloon);
 
         }
     }
