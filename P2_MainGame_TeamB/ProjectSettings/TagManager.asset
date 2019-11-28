@@ -4,22 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - FanAOE
   - Wall
-  - Bomb
-  - TrebArm
-  - FullTrebBody
   - PressurePlate
-  - TestCube
-  - Floor
+  - FanAOE
+  - Bomb
+  - sharp
   - balloon
   - magnet
-  - wire
   - ball
-<<<<<<< HEAD
-  - sharp
-=======
->>>>>>> master
+  - FullTrebBody
+  - TrebArm
+  - balloonBlocker
   layers:
   - Default
   - TransparentFX
@@ -29,7 +24,7 @@ TagManager:
   - UI
   - 
   - 
-  - Lights
+  - 
   - 
   - 
   - 
@@ -56,7 +51,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Lights
-    uniqueID: 221444801
     locked: 0
