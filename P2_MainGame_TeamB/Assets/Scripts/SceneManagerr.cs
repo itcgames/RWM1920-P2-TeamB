@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SceneManagerr : MonoBehaviour
 {
@@ -17,7 +18,6 @@ public class SceneManagerr : MonoBehaviour
     public Button m_ppBtn;
     public Button m_trampBtn;
     public Button m_fanBtn;
-    public Button m_startButton;
     public Button m_resetButton;
     private bool m_isHeldDown;
     private float m_startPosX;
@@ -35,7 +35,6 @@ public class SceneManagerr : MonoBehaviour
         m_ppBtn.onClick.AddListener(() => ButtonCallBack(m_ppBtn));
         m_trampBtn.onClick.AddListener(() => ButtonCallBack(m_trampBtn));
         m_fanBtn.onClick.AddListener(() => ButtonCallBack(m_fanBtn));
-        m_startButton.onClick.AddListener(() => ButtonCallBack(m_startButton));
         m_resetButton.onClick.AddListener(() => ButtonCallBack(m_resetButton));
     }
     void Start()
@@ -115,17 +114,11 @@ public class SceneManagerr : MonoBehaviour
             Instantiate(m_fan);
 
         }
-        if (t_buttonPressed == m_startButton)
-        {
-            
-            Debug.Log("Clicked: " + m_startButton.name);
-
-        }
         if (t_buttonPressed == m_resetButton)
         {
 
             Debug.Log("Clicked: " + m_resetButton.name);
-            Destroy(m_balloon);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
         }
     }
