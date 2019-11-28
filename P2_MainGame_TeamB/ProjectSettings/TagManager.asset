@@ -16,6 +16,10 @@ TagManager:
   - magnet
   - wire
   - ball
+<<<<<<< HEAD
+  - sharp
+=======
+>>>>>>> master
   layers:
   - Default
   - TransparentFX
