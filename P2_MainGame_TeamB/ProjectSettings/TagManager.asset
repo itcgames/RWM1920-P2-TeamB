@@ -4,18 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - FanAOE
   - Wall
-  - Bomb
-  - TrebArm
-  - FullTrebBody
   - PressurePlate
-  - TestCube
-  - Floor
+  - FanAOE
+  - Bomb
+  - sharp
   - balloon
   - magnet
-  - wire
   - ball
+  - FullTrebBody
+  - TrebArm
+  - balloonBlocker
   layers:
   - Default
   - TransparentFX
