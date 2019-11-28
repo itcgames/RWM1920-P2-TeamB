@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:P2_MainGame_TeamB/Assets/Scripts/PlatformScript.cs.meta
-guid: c36a636c444fd814aaa5f224085db818
+<<<<<<< HEAD
+guid: e2bef23911bffd0418c9138f7520be06
 =======
-guid: 4c8d6d211899f6c48bbab62e3eabc93e
->>>>>>> master:P2_MainGame_TeamB/Assets/Scripts/CameraFollow.cs.meta
+guid: c36a636c444fd814aaa5f224085db818
+>>>>>>> 3904c41df7c98503d31c2d8710a77be89061753d
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
