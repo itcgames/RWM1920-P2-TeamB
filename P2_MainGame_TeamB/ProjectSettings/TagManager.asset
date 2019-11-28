@@ -49,6 +49,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Lighting
+    uniqueID: 1796062371
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
