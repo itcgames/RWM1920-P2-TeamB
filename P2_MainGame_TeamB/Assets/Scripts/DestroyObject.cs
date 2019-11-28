@@ -11,9 +11,13 @@ public class DestroyObject : MonoBehaviour
     {
         
         Debug.Log("do something");
-        if (collision.tag == "balloon")
+        if (collision.gameObject.CompareTag("balloon"))
         {
             Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         
     }

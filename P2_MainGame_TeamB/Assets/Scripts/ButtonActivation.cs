@@ -13,7 +13,7 @@ public class ButtonActivation : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D t_other)
     {
-        if (t_other.gameObject.CompareTag("ball")) // check the collision between player and pickups
+        if (t_other.gameObject.CompareTag("Player")) // check the collision between player and pickups
         {
             toBeActivated.SetActive(true);
             Debug.Log("Button Press");
