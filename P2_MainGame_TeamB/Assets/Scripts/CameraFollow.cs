@@ -7,6 +7,7 @@ public class CameraFollow: MonoBehaviour
     private const float ROOF = 14.2f;
     private const float LEFT = -4;
     private const float RIGHT = 4;
+    private const float FLOOR = -14.2f;
 
 
     public GameObject ball;
@@ -26,7 +27,7 @@ public class CameraFollow: MonoBehaviour
         if (ball.transform.position.y > ROOF)
         {
             transform.position = new Vector3(transform.transform.position.x, ROOF, transform.transform.position.z + camOffsetZ);
-        } 
+        }
         if (ball.transform.position.x < LEFT)
         {
             transform.position = new Vector3(LEFT, transform.transform.position.y, transform.transform.position.z + camOffsetZ);
@@ -34,6 +35,10 @@ public class CameraFollow: MonoBehaviour
         if (ball.transform.position.x > RIGHT)
         {
             transform.position = new Vector3(RIGHT, transform.transform.position.y, transform.transform.position.z + camOffsetZ);
+        }
+        if (ball.transform.position.y < FLOOR)
+        {
+            transform.position = new Vector3(transform.transform.position.x, FLOOR, transform.transform.position.z + camOffsetZ);
         }
     }
 }
