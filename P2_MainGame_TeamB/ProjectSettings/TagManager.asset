@@ -15,6 +15,8 @@ TagManager:
   - balloon
   - magnet
   - wire
+  - ball
+  - sharp
   layers:
   - Default
   - TransparentFX
