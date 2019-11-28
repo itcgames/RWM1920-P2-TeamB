@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:P2_MainGame_TeamB/Assets/Texture/Platform/Platform.png.meta
 guid: 5c15986716a381a43835bcf114c1fc23
-=======
-guid: f385210882f7eae48aeffb6708de93d8
->>>>>>> master:P2_MainGame_TeamB/Assets/Materials/Marble.png.meta
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -79,11 +75,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-<<<<<<< HEAD:P2_MainGame_TeamB/Assets/Texture/Platform/Platform.png.meta
     spriteID: 8452051243edbe4418727dfb7a28f201
-=======
-    spriteID: 3156eec7bbd1c8c4888d01475d41d609
->>>>>>> master:P2_MainGame_TeamB/Assets/Materials/Marble.png.meta
     vertices: []
     indices: 
     edges: []
