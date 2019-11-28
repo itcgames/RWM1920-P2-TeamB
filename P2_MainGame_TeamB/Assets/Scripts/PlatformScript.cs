@@ -106,7 +106,7 @@ public class PlatformScript : MonoBehaviour
     private void OnCollisionStay2D(Collision2D collision)
     {
         Vector2 tempVelocity = collision.rigidbody.velocity;
-        tempVelocity.x = movement.x * 1.5f;
+        tempVelocity.x = movement.x * 1.75f;
         collision.rigidbody.velocity = tempVelocity;
     }
 
