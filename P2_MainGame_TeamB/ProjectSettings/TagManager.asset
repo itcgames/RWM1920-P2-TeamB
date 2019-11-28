@@ -15,11 +15,8 @@ TagManager:
   - balloon
   - magnet
   - wire
-  - ball
-<<<<<<< HEAD
   - sharp
-=======
->>>>>>> master
+  - Box
   layers:
   - Default
   - TransparentFX
@@ -29,7 +26,7 @@ TagManager:
   - UI
   - 
   - 
-  - Lights
+  - 
   - 
   - 
   - 
@@ -56,7 +53,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Lights
-    uniqueID: 221444801
     locked: 0
