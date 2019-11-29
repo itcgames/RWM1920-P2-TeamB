@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class CameraFollow: MonoBehaviour
 {
-    private const float ROOF = 14.2f;
-    private const float LEFT = -4;
-    private const float RIGHT = 4;
+    // Dion Scene don't overwrite
+    // TODO: Add constraint for these values if scene == dionScene
+    // OR syncronize cameras / backgrounds
+    private const float ROOF = 14.5f;
+    private const float LEFT = -8.3f;
+    private const float RIGHT = 11;
 
 
     public GameObject ball;
