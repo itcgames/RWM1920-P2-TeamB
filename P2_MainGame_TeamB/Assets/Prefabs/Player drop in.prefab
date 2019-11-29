@@ -281,11 +281,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2098050981796991676}
     m_Modifications:
-    - target: {fileID: 603260075263998535, guid: 23967e68ca506c34eb1c54e8718f556e,
-        type: 3}
-      propertyPath: m_Name
-      value: Fan Prefab
-      objectReference: {fileID: 0}
     - target: {fileID: 603260075263998533, guid: 23967e68ca506c34eb1c54e8718f556e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -356,6 +351,19 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.4768818
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 603260075263998535, guid: 23967e68ca506c34eb1c54e8718f556e,
+        type: 3}
+      propertyPath: m_Name
+      value: Fan Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 603260075704451303, guid: 23967e68ca506c34eb1c54e8718f556e,
+        type: 3}
+      propertyPath: strength
+      value: 55
+      objectReference: {fileID: 0}
+=======
+>>>>>>> 5676f92b6726a1546028d70241a5fd2b9d002870
     - target: {fileID: 603260075263998532, guid: 23967e68ca506c34eb1c54e8718f556e,
         type: 3}
       propertyPath: m_GravityScale
