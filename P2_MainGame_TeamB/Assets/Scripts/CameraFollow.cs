@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CameraFollow: MonoBehaviour
 {
-    private const float ROOF = 14.2f;
-    private const float LEFT = -4;
-    private const float RIGHT = 4;
+    public float ROOF = 14.2f;
+    public float LEFT = -4;
+    public float RIGHT = 4;
 
 
     public GameObject ball;
