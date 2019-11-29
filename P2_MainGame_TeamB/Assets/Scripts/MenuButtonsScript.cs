@@ -11,9 +11,10 @@ public class MenuButtonsScript : MonoBehaviour
         Debug.Log("Quit Game");
     }
 
-    public void PlayGame(int SceneToChangeTo)
+    public void changeScene(int SceneToChangeTo)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneToChangeTo);
         Debug.Log("Quit Game");
     }
+
 }
