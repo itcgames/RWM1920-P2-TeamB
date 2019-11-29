@@ -4,17 +4,18 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Wall
-  - PressurePlate
   - FanAOE
+  - Wall
   - Bomb
-  - sharp
-  - balloon
-  - magnet
-  - ball
-  - FullTrebBody
   - TrebArm
-  - balloonBlocker
+  - FullTrebBody
+  - magnet
+  - balloon
+  - PressurePlate
+  - TestCube
+  - Floor
+  - wire
+  - sharp
   layers:
   - Default
   - TransparentFX
@@ -49,9 +50,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Lighting
-    uniqueID: 1796062371
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

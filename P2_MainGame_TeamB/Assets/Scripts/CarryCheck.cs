@@ -29,7 +29,7 @@ public class CarryCheck : MonoBehaviour
             collision.gameObject.AddComponent<HingeJoint2D>();
             collision.gameObject.GetComponent<HingeJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
             onload = true;
-        }
+        }    
     }
 
 }
