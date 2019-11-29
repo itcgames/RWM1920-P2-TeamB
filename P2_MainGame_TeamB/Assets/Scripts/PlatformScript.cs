@@ -38,7 +38,7 @@ public class PlatformScript : MonoBehaviour
 
         if (activate)
         {
-            movement = new Vector2(speed * slowDown, 0);
+           movement = new Vector2(speed * slowDown, 0);
         }
         else
         {
