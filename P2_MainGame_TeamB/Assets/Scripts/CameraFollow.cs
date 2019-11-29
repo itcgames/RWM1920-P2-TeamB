@@ -9,6 +9,7 @@ public class CameraFollow: MonoBehaviour
     public float ROOF;
     public float LEFT;
     public float RIGHT;
+    public float FLOOR = -14.2f;
 
     private const float ROOFBASE = 14.2f;
     private const float LEFTBASE = -4;
@@ -38,27 +39,7 @@ public class CameraFollow: MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(ball.transform.position.x, ball.transform.position.y, ball.transform.position.z + camOffsetZ);
-        if (SceneManager.GetActiveScene().name == "Eoins_Dev_Scene")
-        {
-            if (ball.transform.position.y > ROOFBASE)
-            {
-                transform.position = new Vector3(transform.transform.position.x, ROOF, transform.transform.position.z + camOffsetZ);
-            }
-            if (ball.transform.position.x < LEFTBASE)
-            {
-                transform.position = new Vector3(LEFT, transform.transform.position.y, transform.transform.position.z + camOffsetZ);
-            }
-            if (ball.transform.position.x > RIGHTBASE)
-            {
-                transform.position = new Vector3(RIGHT, transform.transform.position.y, transform.transform.position.z + camOffsetZ);
-            }
-            if (ball.transform.position.y < FLOORBASE)
-            {
-                transform.position = new Vector3(transform.transform.position.x, FLOORBASE, transform.transform.position.z + camOffsetZ);
-            }
-        }
-        else
-        {
+       {
             if (ball.transform.position.y > ROOF)
             {
                 transform.position = new Vector3(transform.transform.position.x, ROOF, transform.transform.position.z + camOffsetZ);
