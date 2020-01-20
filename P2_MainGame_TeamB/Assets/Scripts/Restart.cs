@@ -12,7 +12,7 @@ public class Restart : MonoBehaviour
 
     public void ReturnToMain()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(sceneBuildIndex: 0);
     }
 }
 
