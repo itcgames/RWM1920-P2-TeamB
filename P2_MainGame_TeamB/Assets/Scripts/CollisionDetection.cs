@@ -8,7 +8,7 @@ public class CollisionDetection : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.transform.gameObject.tag == "PressurePlate")
+        if (other.transform.gameObject.tag == "PressurePlate" || other.transform.gameObject.tag == "Player")
         {
             Debug.Log("Player collided with Pressure Plate");
             Bomb.SetActive(true);

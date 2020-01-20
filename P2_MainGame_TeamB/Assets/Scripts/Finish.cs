@@ -11,7 +11,6 @@ public class Finish : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Goal reached!");
-            Application.Quit();
             SceneManager.LoadScene(SceneToChangeTo);
         }
     }
