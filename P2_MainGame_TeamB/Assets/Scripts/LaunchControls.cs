@@ -9,6 +9,15 @@ public class LaunchControls : MonoBehaviour
     private Vector2 initialPos;
     public Joint2D breakableJoint;
 
+
+    public Button ArmButtonUp;
+    public Button WeightButtonUp;
+    public Button ArmButtonDown;
+    public Button WeightButtonDown;
+    public Button LaunchButton;
+
+    public GameObject buttonsObject;
+
     public Text m_infoText;
     public Text instructions;
 
@@ -39,6 +48,20 @@ public class LaunchControls : MonoBehaviour
         resetWeight = weight.GetComponent<Rigidbody2D>().mass;
         instructions.text = "";
         m_infoText.text = "";
+        setupButtons();
+
+    }
+
+    void setupButtons()
+    {
+
+        buttonsObject.SetActive(false);
+
+        ArmButtonDown.onClick.AddListener(() => ChangeHeight(2));
+        ArmButtonUp.onClick.AddListener(() => ChangeHeight(-2));
+        WeightButtonDown.onClick.AddListener(() => ChangeWeight(-2));
+        WeightButtonUp.onClick.AddListener(() => ChangeWeight(2));
+        LaunchButton.onClick.AddListener(LaunchBall);
 
     }
 
@@ -48,10 +71,14 @@ public class LaunchControls : MonoBehaviour
         armRB.transform.localRotation = Quaternion.Euler(0,0,37f);
     }
 
+    void LaunchBall()
+    {
+        isrotating = true;
+    }
+
     void ProcessEvents()
     {
-
-         if (Input.GetKey(KeyCode.Period))
+        if (Input.GetKey(KeyCode.Period))
         {
             ChangeHeight(-2);
             Debug.Log("rotation: " +  armRB.transform.localRotation.z.ToString());
@@ -77,6 +104,8 @@ public class LaunchControls : MonoBehaviour
         {
            isrotating = true;
         }
+
+
     }
 
     void FixedUpdate()
@@ -92,23 +121,26 @@ public class LaunchControls : MonoBehaviour
         ProcessEvents();
             m_infoText.text = "Launch Arm Angle: " + (armRB.transform.localRotation.z * 100).ToString() + "\nLaunch Force: " + weight.GetComponent<Rigidbody2D>().mass.ToString();
             instructions.text = "Lower Launch Height: ' , ' Key \nRaise Launch Height: '.' Key \nIncrease Launch Force: ' PG UP ' \nDecrease Launch Force: ' PG DN' \nLaunch Catapult : SPACE";
+            buttonsObject.SetActive(true);
+
         }
         else
         {
+            buttonsObject.SetActive(false);
             instructions.text = "";
             m_infoText.text = "";
         }
        
     }
 
-    void ChangeWeight(int t_changeVal)
+    public void ChangeWeight(int t_changeVal)
     {
         Debug.Log("change Weight");
         weight.GetComponent<Rigidbody2D>().mass += t_changeVal;
         WeigthForce = weight.GetComponent<Rigidbody2D>().mass * 0.001f;
     }
 
-    void ChangeHeight(int t_changeVal)
+    public void ChangeHeight(int t_changeVal)
     {
         Debug.Log("change Weight");
 
