@@ -11,6 +11,10 @@ public class CarryCheck : MonoBehaviour
     private string goods = " ";
     private GameObject player;
 
+    public bool getOnLoad()
+    {
+        return onload;
+    }
     private void Start()
     {
         hint.text = " ";

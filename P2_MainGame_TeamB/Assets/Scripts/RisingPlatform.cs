@@ -8,7 +8,7 @@ public class RisingPlatform : MonoBehaviour
     public bool activate;
     private Rigidbody2D rb2d;
     private Vector2 movement;
-
+    private bool isGoDown = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,12 @@ public class RisingPlatform : MonoBehaviour
         if (activate)
         {
             movement = new Vector2(0, speed);
+            if (isGoDown)
+            {
+                movement.y *= -1;
+            }
             rb2d.velocity = movement;
+            StartCoroutine(goDown());
         }
     }
 
@@ -32,5 +37,10 @@ public class RisingPlatform : MonoBehaviour
         {
             activate = true;
         }
+    }
+    IEnumerator goDown()
+    {
+        yield return new WaitForSeconds(2.4f);
+        isGoDown = true;
     }
 }
