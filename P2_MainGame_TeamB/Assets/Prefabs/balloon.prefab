@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8602559517922806114}
   - component: {fileID: 8602559517922806117}
-  - component: {fileID: 8602559517922806116}
   - component: {fileID: 8602559517922806118}
   - component: {fileID: 8602559517922806121}
+  - component: {fileID: 4153945933471752795}
   m_Layer: 0
   m_Name: balloon
   m_TagString: balloon
@@ -83,20 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8602559517922806116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8602559517922806123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a6788d0af7fcae4481560aeb8cf7312, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 100
-  balloonPosition: {x: 0, y: 0}
 --- !u!60 &8602559517922806118
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -151,6 +137,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4153945933471752795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8602559517922806123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a6788d0af7fcae4481560aeb8cf7312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 300
+  balloonPosition: {x: 0, y: 0}
 --- !u!1 &8602559518034649452
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,6 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a7df15c69a973b4fb2e8c2dab4d33ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  releaseButton: {fileID: 0}
 --- !u!1 &8602559519441724622
 GameObject:
   m_ObjectHideFlags: 0
