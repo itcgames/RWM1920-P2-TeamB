@@ -26,35 +26,78 @@ public class CameraFollow: MonoBehaviour
 
 
     public GameObject ball;
+    public GameObject goal;
+
+    private bool start;
+    private Vector3 distance;
+    private float timePerFrame;
+    private float counter;
+    public float timeForPreview;
+
     private float camOffsetZ;
 
     // Start is called before the first frame update
     void Start()
     {
+        start = false;
+        timePerFrame = Time.deltaTime;
+        counter = 0;
+
         camOffsetZ  = transform.position.z - ball.transform.position.z;
         transform.position = new Vector3(ball.transform.position.x, ball.transform.position.y, ball.transform.position.z + camOffsetZ);
+        distance = ball.transform.position - goal.transform.position;
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(ball.transform.position.x, ball.transform.position.y, ball.transform.position.z + camOffsetZ);
-       {
-            if (ball.transform.position.y > ROOF)
+        if (!start)
+        {
+            Time.timeScale = 0.0f;
+
+            counter += timePerFrame;
+            Debug.Log(counter);
+            Debug.Log(timePerFrame);
+
+            if (counter >= timeForPreview)
             {
-                transform.position = new Vector3(transform.transform.position.x, ROOF, transform.transform.position.z + camOffsetZ);
+                start = true;
             }
-            if (ball.transform.position.x < LEFT)
+            
+            if (counter < timeForPreview / 2)
             {
-                transform.position = new Vector3(LEFT, transform.transform.position.y, transform.transform.position.z + camOffsetZ);
+                transform.position = transform.position - (distance * counter / (timeForPreview / 2));
             }
-            if (ball.transform.position.x > RIGHT)
+            else
             {
-                transform.position = new Vector3(RIGHT, transform.transform.position.y, transform.transform.position.z + camOffsetZ);
+                transform.position = transform.position + (distance * (counter - (timeForPreview / 2)) / timeForPreview);
             }
-            if (ball.transform.position.y < FLOORBASE)
+
+        }
+        else
+        {
+            Time.timeScale = 1.0f;
+
+            transform.position = new Vector3(ball.transform.position.x, ball.transform.position.y, ball.transform.position.z + camOffsetZ);
             {
-                transform.position = new Vector3(transform.transform.position.x, FLOORBASE, transform.transform.position.z + camOffsetZ);
+                if (ball.transform.position.y > ROOF)
+                {
+                    transform.position = new Vector3(transform.transform.position.x, ROOF, transform.transform.position.z + camOffsetZ);
+                }
+                if (ball.transform.position.x < LEFT)
+                {
+                    transform.position = new Vector3(LEFT, transform.transform.position.y, transform.transform.position.z + camOffsetZ);
+                }
+                if (ball.transform.position.x > RIGHT)
+                {
+                    transform.position = new Vector3(RIGHT, transform.transform.position.y, transform.transform.position.z + camOffsetZ);
+                }
+                if (ball.transform.position.y < FLOORBASE)
+                {
+                    transform.position = new Vector3(transform.transform.position.x, FLOORBASE, transform.transform.position.z + camOffsetZ);
+                }
             }
         }
     }
