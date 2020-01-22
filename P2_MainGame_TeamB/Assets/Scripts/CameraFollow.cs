@@ -26,7 +26,6 @@ public class CameraFollow: MonoBehaviour
 
 
     public GameObject ball;
-    public GameObject goal;
 
     public bool start;
     private Vector3 distance;

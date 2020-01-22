@@ -2947,7 +2947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c7fc5f38dc082499d14986c8f65103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bomb: {fileID: 0}
+  Bomb: {fileID: 979451028}
 --- !u!1 &340886456
 GameObject:
   m_ObjectHideFlags: 0
@@ -7144,6 +7144,7 @@ MonoBehaviour:
   FLOOR: -2
   ball: {fileID: 1211373502}
   goal: {fileID: 773669822}
+  start: 0
   timeForPreview: 10
 --- !u!1 &845236456
 GameObject:
@@ -8355,6 +8356,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &979451028 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2420082149650087740, guid: 3359ca9964fc1084cb7c821e38edd83e,
+    type: 3}
+  m_PrefabInstance: {fileID: 970673829}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee43eac1d15836d44b6867df7097d070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &982610177
 GameObject:
   m_ObjectHideFlags: 0
