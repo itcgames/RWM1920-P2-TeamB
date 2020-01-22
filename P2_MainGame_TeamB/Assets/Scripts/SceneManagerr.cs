@@ -19,10 +19,12 @@ public class SceneManagerr : MonoBehaviour
     public Button m_trampBtn;
     public Button m_fanBtn;
     public Button m_resetButton;
+    public Button m_pauseButton;
     private bool m_isHeldDown;
     private float m_startPosX;
     private float m_startPosY;
     Vector3 m_mousePos;
+    bool m_paused;
 
     
     void OnEnable()
@@ -36,10 +38,12 @@ public class SceneManagerr : MonoBehaviour
         m_trampBtn.onClick.AddListener(() => ButtonCallBack(m_trampBtn));
         m_fanBtn.onClick.AddListener(() => ButtonCallBack(m_fanBtn));
         m_resetButton.onClick.AddListener(() => ButtonCallBack(m_resetButton));
+        m_pauseButton.onClick.AddListener(() => ButtonCallBack(m_pauseButton));
     }
     void Start()
     {
-
+        m_paused = true;
+        Time.timeScale = 0;
     }
     // Update is called once per frame
     void Update()
@@ -75,51 +79,62 @@ public class SceneManagerr : MonoBehaviour
 
     private void ButtonCallBack(Button t_buttonPressed)
     {
-        if (t_buttonPressed == m_ballonBtn)
+        if(m_paused)
         {
-            Debug.Log("Clicked: " + m_ballonBtn.name);
-            Instantiate(m_balloon);
-            
-        }
+            if (t_buttonPressed == m_ballonBtn)
+            {
+                Debug.Log("Clicked: " + m_ballonBtn.name);
+                Instantiate(m_balloon);
 
-        if (t_buttonPressed == m_bombBtn)
-        {
-            Debug.Log("Clicked: " + m_bombBtn.name);
-            Instantiate(m_bomb);
- 
-        }
+            }
 
-        if (t_buttonPressed == m_tbBtn)
-        {
-            Debug.Log("Clicked: " + m_tbBtn.name);
-            Instantiate(m_tb);
+            if (t_buttonPressed == m_bombBtn)
+            {
+                Debug.Log("Clicked: " + m_bombBtn.name);
+                Instantiate(m_bomb);
 
-        }
+            }
 
-        if (t_buttonPressed == m_ppBtn)
-        {
-            Debug.Log("Clicked: " + m_ppBtn.name);
-            Instantiate(m_pp);
+            if (t_buttonPressed == m_tbBtn)
+            {
+                Debug.Log("Clicked: " + m_tbBtn.name);
+                Instantiate(m_tb);
 
-        }
-        if (t_buttonPressed == m_trampBtn)
-        {
-            Debug.Log("Clicked: " + m_trampBtn.name);
-            Instantiate(m_tramp);
+            }
 
-        }
-        if (t_buttonPressed == m_fanBtn)
-        {
-            Debug.Log("Clicked: " + m_fanBtn.name);
-            Instantiate(m_fan);
+            if (t_buttonPressed == m_ppBtn)
+            {
+                Debug.Log("Clicked: " + m_ppBtn.name);
+                Instantiate(m_pp);
 
-        }
-        if (t_buttonPressed == m_resetButton)
-        {
+            }
+            if (t_buttonPressed == m_trampBtn)
+            {
+                Debug.Log("Clicked: " + m_trampBtn.name);
+                Instantiate(m_tramp);
 
-            Debug.Log("Clicked: " + m_resetButton.name);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+            if (t_buttonPressed == m_fanBtn)
+            {
+                Debug.Log("Clicked: " + m_fanBtn.name);
+                Instantiate(m_fan);
 
+            }
+            if (t_buttonPressed == m_resetButton)
+            {
+                Time.timeScale = 0;
+                Debug.Log("Clicked: " + m_resetButton.name);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                m_paused = true;
+
+            }
+            if (t_buttonPressed == m_pauseButton)
+            {
+                Time.timeScale = 1;
+                Debug.Log("Clicked: " + m_pauseButton.name);
+                m_paused = false;
+            }
         }
     }
+       
 }

@@ -13,6 +13,10 @@ public class CarryCheck : MonoBehaviour
     private GameObject player;
     private float timer = 0.0f;
 
+    public bool getOnLoad()
+    {
+        return onload;
+    }
     private void Start()
     {
         releaseButton.gameObject.SetActive(false);
