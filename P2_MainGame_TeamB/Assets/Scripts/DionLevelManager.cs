@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿                                                                                                                                                                                       using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,9 +13,10 @@ public class DionLevelManager : MonoBehaviour
     // Start is called before the first frame update
     IEnumerator deleteBalloon()
     {
-        yield return new WaitForSeconds(7.5f);
+        yield return new WaitForSeconds(5.5f);
 
-        ballon1.SetActive(false);
+        ballon1.GetComponent<PolygonCollider2D>().enabled = false;
+        ballon1.GetComponent<SpriteRenderer>().enabled = false;
     }
     void Update()
     {
