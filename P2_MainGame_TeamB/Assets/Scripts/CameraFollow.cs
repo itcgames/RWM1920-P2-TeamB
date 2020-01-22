@@ -28,6 +28,7 @@ public class CameraFollow: MonoBehaviour
     public GameObject ball;
 
     public bool start;
+
     private Vector3 distance;
     private Vector3 leftVector;
     private Vector3 rightVector;
@@ -99,5 +100,10 @@ public class CameraFollow: MonoBehaviour
             }
 
         }
+    }
+
+    public bool startCheck()
+    {
+        return start;
     }
 }

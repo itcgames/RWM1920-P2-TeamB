@@ -9107,6 +9107,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1268517523}
     m_Modifications:
+    - target: {fileID: 8602559517922806123, guid: e31549d06c95753439b096471cb6b71e,
+        type: 3}
+      propertyPath: m_Name
+      value: balloon (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 8602559517922806114, guid: e31549d06c95753439b096471cb6b71e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9161,11 +9166,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8602559517922806123, guid: e31549d06c95753439b096471cb6b71e,
-        type: 3}
-      propertyPath: m_Name
-      value: balloon (1)
       objectReference: {fileID: 0}
     - target: {fileID: 8602559518034649450, guid: e31549d06c95753439b096471cb6b71e,
         type: 3}
@@ -12052,6 +12052,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 805520136}
     m_Modifications:
+    - target: {fileID: 5151719546723257390, guid: 8cd581424c744c14dba4b7dac6162622,
+        type: 3}
+      propertyPath: m_Name
+      value: ButtonReset 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5151719546723257389, guid: 8cd581424c744c14dba4b7dac6162622,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12156,11 +12161,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5151719546723257390, guid: 8cd581424c744c14dba4b7dac6162622,
-        type: 3}
-      propertyPath: m_Name
-      value: ButtonReset 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cd581424c744c14dba4b7dac6162622, type: 3}
@@ -19733,5 +19733,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8357507334116153111, guid: 77c88fb35d4902a4f9ce1d1e5d1773b3,
+        type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 812281838}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77c88fb35d4902a4f9ce1d1e5d1773b3, type: 3}
