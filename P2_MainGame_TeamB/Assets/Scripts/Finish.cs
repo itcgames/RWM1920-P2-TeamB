@@ -2,16 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
-public class Finish : MonoBehaviour
+namespace P3.HighScores
 {
-    public int SceneToChangeTo = 0;
-    private void OnTriggerEnter2D(Collider2D collision)
+    public class Finish : MonoBehaviour
     {
-        if (collision.gameObject.tag == "Player")
+
+        private GameObject timer;
+        private TimerController tScript;
+
+        private float finalTime = 0.0f;
+
+        public int SceneToChangeTo = 0;
+        public int FinalSceneIndex = 5;
+
+        private void Awake()
         {
-            Debug.Log("Goal reached!");
-            SceneManager.LoadScene(SceneToChangeTo);
+            timer =  GameObject.Find("TimerController");
+            tScript = timer.GetComponent<TimerController>();
         }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                Debug.Log("Goal reached!");
+                SceneManager.LoadScene(SceneToChangeTo);
+                finalTime = tScript.m_timer;
+            }
+        }
+
+
     }
 }
