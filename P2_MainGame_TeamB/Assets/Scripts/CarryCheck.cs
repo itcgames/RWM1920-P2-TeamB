@@ -2,33 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class CarryCheck : MonoBehaviour
 {
-    public Text hint;
+    public Button releaseButton;
+
 
     private bool onload = false;
-    private bool release = false;
     private string goods = " ";
     private GameObject player;
+    private float timer = 0.0f;
 
     private void Start()
     {
-        hint.text = " ";
+        releaseButton.gameObject.SetActive(false);
     }
 
     private void Update()
     {
         if (onload && goods == "Player")
         {
-            hint.text = "Press 'Space' To Release";
+            releaseButton.gameObject.SetActive(true);
         }
 
-        if (Input.GetKeyDown("space") && onload && goods == "Player")
+        if (timer > 0.0f)
         {
-            Debug.Log(goods);
-            release = true;
-            hint.text = " ";
-            Destroy(player.GetComponent<HingeJoint2D>());
+            timer -= Time.deltaTime;
+            if (timer <= 0.0f)
+            {
+                releaseButton.gameObject.SetActive(false);
+                onload = false;
+            }
         }
     }
 
@@ -42,9 +46,17 @@ public class CarryCheck : MonoBehaviour
             collision.gameObject.AddComponent<HingeJoint2D>();
             collision.gameObject.GetComponent<HingeJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
             onload = true;
-
-
         }    
+    }
+
+    public void ReleaseTheBall()
+    {
+        if (onload && goods == "Player")
+        {
+            Debug.Log(goods);
+            timer = 0.30f;
+            Destroy(player.GetComponent<HingeJoint2D>());
+        }
     }
 
 }
