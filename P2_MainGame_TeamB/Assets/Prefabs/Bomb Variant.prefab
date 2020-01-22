@@ -7,6 +7,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1601158896029036544, guid: 3359ca9964fc1084cb7c821e38edd83e,
+        type: 3}
+      propertyPath: m_Name
+      value: Bomb Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1601158896029036545, guid: 3359ca9964fc1084cb7c821e38edd83e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1601158895380357303, guid: 3359ca9964fc1084cb7c821e38edd83e,
+        type: 3}
+      propertyPath: m_maxSize
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2420082150770848133, guid: 3359ca9964fc1084cb7c821e38edd83e,
         type: 3}
       propertyPath: m_Name

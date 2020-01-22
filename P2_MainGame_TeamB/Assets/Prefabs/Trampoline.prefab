@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3408591231899719205}
   - component: {fileID: 3408591231899719200}
   - component: {fileID: 6395576655925992759}
+  - component: {fileID: 114149198505754204}
   m_Layer: 0
   m_Name: Trampoline
   m_TagString: Untagged
@@ -62,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fa41cdc4cdc552a4b8000e8fb1e06496, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -94,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3680369e086a35c4aada5455dc9321c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceAmount: 200
+  bounceAmount: 1000
 --- !u!61 &3408591231899719205
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -238,6 +239,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114149198505754204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3408591231899719203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a18af803be4fc34ba66ed3db328771d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6395576656245958232
 GameObject:
   m_ObjectHideFlags: 0
