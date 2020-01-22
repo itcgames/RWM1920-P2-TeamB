@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PatrykScene.unity
     guid: 5c50514f7d2183c49a0fc6f36abfa994
+  - enabled: 1
+    path: Assets/Scenes/HighScoreScene.unity
+    guid: 6fe5775cf708bcb44afb744e52735078
   m_configObjects: {}
