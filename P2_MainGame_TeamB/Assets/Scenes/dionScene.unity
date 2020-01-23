@@ -936,6 +936,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimerController
       objectReference: {fileID: 0}
+    - target: {fileID: 7705073143594510780, guid: 79765fa9706e6fe419677e65d53dbff1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7705073143594510778, guid: 79765fa9706e6fe419677e65d53dbff1,
         type: 3}
       propertyPath: m_LocalPosition.x
