@@ -38,9 +38,15 @@ public class CameraFollow: MonoBehaviour
 
     private float camOffsetZ;
 
+    public GameObject reset;
+    public GameObject pause;
+
     // Start is called before the first frame update
     void Start()
     {
+        reset.SetActive(false);
+        pause.SetActive(false);
+
         start = false;
         timePerFrame = Time.deltaTime;
         counter = 0;
@@ -66,6 +72,8 @@ public class CameraFollow: MonoBehaviour
             {
                 start = true;
                 Time.timeScale = 1.0f;
+                reset.SetActive(true);
+                pause.SetActive(true);
             }
 
             if (counter < timeForPreview / 2)
