@@ -23,8 +23,6 @@ public class CameraFollow: MonoBehaviour
     //private const float LEFT = -8.3f;
     //private const float RIGHT = 11;
 
-
-
     public GameObject ball;
 
     public bool start;
