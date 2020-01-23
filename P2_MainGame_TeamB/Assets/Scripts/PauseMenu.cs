@@ -6,7 +6,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
 
-    private CameraFollow camera;
+    public CameraFollow camera;
 
     private bool pause;
     private bool start;
@@ -15,11 +15,16 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         pause = false;
-        start = camera.start;
+        start = camera.startCheck();
+        
     }
 
     public void Pause()
     {
+        start = camera.startCheck();
+
+        Debug.Log(start);
+
         if (!pause)
         {
             pause = true;
@@ -30,6 +35,7 @@ public class PauseMenu : MonoBehaviour
         }
 
         Debug.Log(Time.timeScale);
+        Debug.Log(start);
     }
 
     private void Update()

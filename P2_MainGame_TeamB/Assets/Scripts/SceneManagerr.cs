@@ -12,6 +12,8 @@ public class SceneManagerr : MonoBehaviour
     public GameObject m_pp;
     public GameObject m_tramp;
     public GameObject m_fan;
+    public GameObject m_platformHori;
+    public GameObject m_platformVert;
     public Button m_ballonBtn;
     public Button m_bombBtn;
     public Button m_tbBtn;
@@ -20,6 +22,8 @@ public class SceneManagerr : MonoBehaviour
     public Button m_fanBtn;
     public Button m_resetButton;
     public Button m_pauseButton;
+    public Button m_ptmHori;
+    public Button m_ptmVert;
     private bool m_isHeldDown;
     private float m_startPosX;
     private float m_startPosY;
@@ -39,6 +43,8 @@ public class SceneManagerr : MonoBehaviour
         m_fanBtn.onClick.AddListener(() => ButtonCallBack(m_fanBtn));
         m_resetButton.onClick.AddListener(() => ButtonCallBack(m_resetButton));
         m_pauseButton.onClick.AddListener(() => ButtonCallBack(m_pauseButton));
+        m_ptmHori.onClick.AddListener(() => ButtonCallBack(m_ptmHori));
+        m_ptmVert.onClick.AddListener(() => ButtonCallBack(m_ptmVert));
     }
     void Start()
     {
@@ -118,6 +124,18 @@ public class SceneManagerr : MonoBehaviour
             {
                 Debug.Log("Clicked: " + m_fanBtn.name);
                 Instantiate(m_fan);
+
+            }
+            if (t_buttonPressed == m_ptmHori)
+            {
+                Debug.Log("Clicked: " + m_ptmHori.name);
+                Instantiate(m_platformHori);
+
+            }
+            if (t_buttonPressed == m_ptmVert)
+            {
+                Debug.Log("Clicked: " + m_ptmVert.name);
+                Instantiate(m_platformVert);
 
             }
             if (t_buttonPressed == m_resetButton)
