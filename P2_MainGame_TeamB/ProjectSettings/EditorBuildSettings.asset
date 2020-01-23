@@ -15,11 +15,11 @@ EditorBuildSettings:
     path: Assets/Scenes/ZhenzeScene.unity
     guid: 9d5c0acd6f158544a9894af3b67c18b7
   - enabled: 1
-    path: Assets/Scenes/dionScene.unity
-    guid: 6d6dc79be363a884387c50cfb0a38d1a
-  - enabled: 1
     path: Assets/Scenes/PatrykScene.unity
     guid: 5c50514f7d2183c49a0fc6f36abfa994
+  - enabled: 1
+    path: Assets/Scenes/dionScene.unity
+    guid: 6d6dc79be363a884387c50cfb0a38d1a
   - enabled: 1
     path: Assets/Scenes/HighScoreScene.unity
     guid: 6fe5775cf708bcb44afb744e52735078

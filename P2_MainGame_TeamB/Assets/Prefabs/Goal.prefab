@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 389204179084026107}
   - component: {fileID: 980718600303590519}
+  - component: {fileID: 7525382211642819538}
   - component: {fileID: 3472643147282164919}
   - component: {fileID: 3943096138243709718}
   - component: {fileID: 1318608999242227637}
   - component: {fileID: 377307255601419088}
   m_Layer: 0
-  m_Name: Goal 1
+  m_Name: Goal
   m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,6 +84,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7525382211642819538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7882017599165716778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c661405152a1c9f47af9f3d581045ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxEntries: 8
+  highScoreHolderTransform: {fileID: 6932059141403386261, guid: 3a73e54d2ad3fb8499c8c86a6d7a76d8,
+    type: 3}
+  ScoreEntryObject: {fileID: 8962066324831511868, guid: f82b467cddbe35c4ba78265e4755d566,
+    type: 3}
+  testentryData:
+    m_name: 
+    m_time: 0
 --- !u!114 &3472643147282164919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,6 +116,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c6222efa6f786349b478189502ac0de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  table: {fileID: 0}
+  SceneToChangeTo: 0
+  FinalSceneIndex: 5
 --- !u!61 &3943096138243709718
 BoxCollider2D:
   m_ObjectHideFlags: 0

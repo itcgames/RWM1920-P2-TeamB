@@ -16,9 +16,11 @@ namespace P3.HighScores
 
         public void init(HighScoreEntryData t_entryData, int Yval)
         {
-            entryNameText.text = t_entryData.m_name;
-            entryScoreText.text = t_entryData.m_time.ToString();
-            entryNum.text = Yval.ToString();
+            entryNameText.text = "";
+            double timeRnd = System.Math.Round(t_entryData.m_time, 2);
+            entryScoreText.text = timeRnd.ToString();
+
+            entryNum.text = (Yval+1).ToString();
             RectTransform transform = GetComponent<RectTransform>();
 
             Vector3 pos = transform.position;
