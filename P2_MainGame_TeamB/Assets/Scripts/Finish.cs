@@ -13,7 +13,6 @@ namespace P3.HighScores
         private TimerController tScript;
 
         private float finalTime = 0.0f;
-        public GameObject table;
 
         private HighScoreTableScript Tablescript;
 
@@ -36,11 +35,14 @@ namespace P3.HighScores
             if (collision.gameObject.tag == "Player")
             {
                 Debug.Log("Goal reached!");
+                if (SceneToChangeTo == FinalSceneIndex)
+                {
+                    finalTime = tScript.m_timer;
+                    data.m_name = "Test";
+                    data.m_time = tScript.m_timer;
+                    Tablescript.addEntry(data);
+                }
                 SceneManager.LoadScene(SceneToChangeTo);
-                finalTime = tScript.m_timer;
-                data.m_name = "Test";
-                data.m_time = tScript.m_timer;
-                Tablescript.addEntry(data);
             }
         }
 

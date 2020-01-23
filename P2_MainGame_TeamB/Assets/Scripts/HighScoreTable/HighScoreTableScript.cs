@@ -12,7 +12,7 @@ namespace P3.HighScores
         [Header("Test")]
         [SerializeField] HighScoreEntryData testentryData = new HighScoreEntryData();
 
-        private string savePath => $"{Application.persistentDataPath}/highscores.json";
+        private string SavePath => $"{Application.persistentDataPath}/highscores.json";
 
         private void Start()
         {
@@ -25,11 +25,11 @@ namespace P3.HighScores
         {
             HighScoreSaveData savedScores = getSavedScores();
 
-                bool scoreAdded = false;
+            bool scoreAdded = false;
 
             for (int i = 0;  i < savedScores.highScores.Count; i++)
             {
-                if(t_data.m_time > savedScores.highScores[i].m_time)
+                if(t_data.m_time < savedScores.highScores[i].m_time)
                 {
                     savedScores.highScores.Insert(i, t_data);
                     scoreAdded = true;
@@ -79,25 +79,27 @@ namespace P3.HighScores
 
         private HighScoreSaveData getSavedScores()
         {
-            if(!File.Exists(savePath))
+            if(!File.Exists(SavePath))
             {
-                File.Create(savePath).Dispose();
+                File.Create(SavePath).Dispose();
                 return new HighScoreSaveData();
             }
-            using(StreamReader stream = new StreamReader(savePath))
+                string json = File.ReadAllText(SavePath);
+            if (json == "")
             {
-                string json = stream.ReadToEnd();
+                return new HighScoreSaveData();
+            }
+            else
+            {
                 return JsonUtility.FromJson<HighScoreSaveData>(json);
             }
         }
 
         private void SaveScores(HighScoreSaveData t_saveData)
         {
-            using (StreamWriter stream = new StreamWriter(savePath))
-            {
                 string json = JsonUtility.ToJson(t_saveData, true);
-                stream.Write(json);
-            }
+                File.WriteAllText(SavePath,json);
+            
         }
     }
 }
