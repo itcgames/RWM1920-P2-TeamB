@@ -1903,11 +1903,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformSwitch (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7346383563392865840, guid: c02b130d2e4b0474a8b4db8e1212794a,
-        type: 3}
-      propertyPath: platform
-      value: 
-      objectReference: {fileID: 1021230380}
     - target: {fileID: 5286157432695116518, guid: c02b130d2e4b0474a8b4db8e1212794a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1963,6 +1958,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7346383563392865840, guid: c02b130d2e4b0474a8b4db8e1212794a,
+        type: 3}
+      propertyPath: platform
+      value: 
+      objectReference: {fileID: 1021230380}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c02b130d2e4b0474a8b4db8e1212794a, type: 3}
 --- !u!1 &246648517
@@ -10251,6 +10251,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 114279172721512894, guid: b8383a07c2a176642a3b4c64317bdfa0, type: 3}
     - {fileID: 4816972177334416566, guid: b8383a07c2a176642a3b4c64317bdfa0, type: 3}
+    - {fileID: 114611008650011718, guid: b8383a07c2a176642a3b4c64317bdfa0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b8383a07c2a176642a3b4c64317bdfa0, type: 3}
 --- !u!1 &1116055323
 GameObject:
@@ -13860,6 +13861,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goal
       objectReference: {fileID: 0}
+    - target: {fileID: 980718600303590519, guid: 575c5802c2e4ef4439c7a4ef2a79c475,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 980718600303590519, guid: 575c5802c2e4ef4439c7a4ef2a79c475,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 389204179084026107, guid: 575c5802c2e4ef4439c7a4ef2a79c475,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13934,16 +13945,6 @@ PrefabInstance:
         type: 3}
       propertyPath: SceneToChangeTo
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 980718600303590519, guid: 575c5802c2e4ef4439c7a4ef2a79c475,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 980718600303590519, guid: 575c5802c2e4ef4439c7a4ef2a79c475,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 575c5802c2e4ef4439c7a4ef2a79c475, type: 3}
@@ -14853,11 +14854,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformSwitch
       objectReference: {fileID: 0}
-    - target: {fileID: 7346383563392865840, guid: c02b130d2e4b0474a8b4db8e1212794a,
-        type: 3}
-      propertyPath: platform
-      value: 
-      objectReference: {fileID: 1160669103}
     - target: {fileID: 5286157432695116518, guid: c02b130d2e4b0474a8b4db8e1212794a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14913,6 +14909,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 7346383563392865840, guid: c02b130d2e4b0474a8b4db8e1212794a,
+        type: 3}
+      propertyPath: platform
+      value: 
+      objectReference: {fileID: 1160669103}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c02b130d2e4b0474a8b4db8e1212794a, type: 3}
 --- !u!1 &1642041304
@@ -17932,11 +17933,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressurePlate
       objectReference: {fileID: 0}
-    - target: {fileID: 5286157434745320162, guid: c02b130d2e4b0474a8b4db8e1212794a,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.7
-      objectReference: {fileID: 0}
     - target: {fileID: 5286157432695116518, guid: c02b130d2e4b0474a8b4db8e1212794a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17996,6 +17992,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286157434745320162, guid: c02b130d2e4b0474a8b4db8e1212794a,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4684602112296212342, guid: c02b130d2e4b0474a8b4db8e1212794a,
         type: 3}
