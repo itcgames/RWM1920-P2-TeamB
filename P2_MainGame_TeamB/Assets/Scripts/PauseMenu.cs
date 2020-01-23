@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenu;
 
     public CameraFollow camera;
+    public SceneManagerr scene;
 
     private bool pause;
     private bool start;
@@ -15,13 +16,27 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         pause = false;
-        start = camera.startCheck();
+        if (camera != null)
+        {
+            start = camera.startCheck();
+        }
+        else if (scene != null)
+        {
+            start = scene.startCheck();
+        }
         
     }
 
     public void Pause()
     {
-        start = camera.startCheck();
+        if (camera != null)
+        {
+            start = camera.startCheck();
+        }
+        else if (scene != null)
+        {
+            start = scene.startCheck();
+        }
 
         Debug.Log(start);
 
