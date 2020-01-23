@@ -13,17 +13,22 @@ namespace P3.HighScores
         private TimerController tScript;
 
         private float finalTime = 0.0f;
-        public HighScoreTable tableScript;
+        public GameObject table;
 
-        public HighScoreEntryData data = new HighScoreEntryData();
+        private HighScoreTableScript Tablescript;
+
+        private HighScoreEntryData data = new HighScoreEntryData();
 
         public int SceneToChangeTo = 0;
         public int FinalSceneIndex = 5;
 
+        GameObject[] goArray;
+        GameObject rootGo;
         private void Awake()
         {
             timer =  GameObject.Find("TimerController");
             tScript = timer.GetComponent<TimerController>();
+            Tablescript = gameObject.GetComponent<HighScoreTableScript>();
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -35,7 +40,7 @@ namespace P3.HighScores
                 finalTime = tScript.m_timer;
                 data.m_name = "Test";
                 data.m_time = tScript.m_timer;
-                tableScript.addEntry(data);
+                Tablescript.addEntry(data);
             }
         }
 

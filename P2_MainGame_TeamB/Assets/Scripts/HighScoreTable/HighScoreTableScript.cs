@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace P3.HighScores
 {
-    public class HighScoreTable : MonoBehaviour
+    public class HighScoreTableScript : MonoBehaviour
     {
         [SerializeField] private int MaxEntries = 8;
         [SerializeField] private Transform highScoreHolderTransform = null;

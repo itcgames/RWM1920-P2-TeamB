@@ -13,6 +13,8 @@ namespace P3.HighScores
         public Text m_timerText;
         private bool m_isTimerActive;
 
+
+
         void Start()
         {
             m_isTimerActive = true;
