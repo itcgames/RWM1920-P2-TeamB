@@ -13,6 +13,9 @@ namespace P3.HighScores
         private TimerController tScript;
 
         private float finalTime = 0.0f;
+        public HighScoreTable tableScript;
+
+        public HighScoreEntryData data = new HighScoreEntryData();
 
         public int SceneToChangeTo = 0;
         public int FinalSceneIndex = 5;
@@ -30,9 +33,11 @@ namespace P3.HighScores
                 Debug.Log("Goal reached!");
                 SceneManager.LoadScene(SceneToChangeTo);
                 finalTime = tScript.m_timer;
+                data.m_name = "Test";
+                data.m_time = tScript.m_timer;
+                tableScript.addEntry(data);
             }
         }
-
 
     }
 }
