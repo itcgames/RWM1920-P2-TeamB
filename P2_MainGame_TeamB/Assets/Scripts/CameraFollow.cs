@@ -66,6 +66,12 @@ public class CameraFollow: MonoBehaviour
 
             counter += timePerFrame;
 
+            Debug.Log(Input.touchCount);
+            if (Input.touchCount > 0)
+            {
+                counter = timeForPreview;
+            }
+
             if (counter >= timeForPreview)
             {
                 start = true;
@@ -105,6 +111,15 @@ public class CameraFollow: MonoBehaviour
                 transform.position = new Vector3(transform.transform.position.x, FLOORBASE, transform.transform.position.z + camOffsetZ);
             }
 
+        }
+    }
+
+    private void OnMouseDown()
+    {
+        Debug.Log("tap!");
+        if (!start)
+        {
+            counter = timeForPreview;
         }
     }
 
