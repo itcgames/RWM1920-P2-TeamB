@@ -90,7 +90,6 @@ GameObject:
   - component: {fileID: 1587664608265369514}
   - component: {fileID: 1587664608265369515}
   - component: {fileID: 1587664608265369512}
-  - component: {fileID: 1587664608265369513}
   - component: {fileID: 1587664609689263549}
   m_Layer: 0
   m_Name: Light
@@ -178,18 +177,6 @@ CircleCollider2D:
   m_Offset: {x: -0.020817854, y: 0}
   serializedVersion: 2
   m_Radius: 0.4943551
---- !u!114 &1587664608265369513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1587664608265369518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c6222efa6f786349b478189502ac0de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!108 &1587664609689263549
 Light:
   m_ObjectHideFlags: 0

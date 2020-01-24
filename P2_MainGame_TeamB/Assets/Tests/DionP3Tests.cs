@@ -6,23 +6,28 @@ using UnityEngine.TestTools;
 
 namespace Tests
 {
+    [TestFixture]
     public class DionP3Tests
     {
-        // A Test behaves as an ordinary method
-        [Test]
-        public void DionP3TestsSimplePasses()
+        GameObject light, bg;
+
+        [SetUp]
+        public void Setup()
         {
-            // Use the Assert class to test conditions
+            light = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Light"));
         }
 
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
-        [UnityTest]
-        public IEnumerator DionP3TestsWithEnumeratorPasses()
+        [TearDown]
+        public void Teardown()
         {
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
-            yield return null;
+            Object.Destroy(light);
         }
+
+        [Test]
+        public void LightEmittsLight()
+        {
+            Assert.True(light.GetComponent<Light>().enabled);
+        }
+
     }
 }

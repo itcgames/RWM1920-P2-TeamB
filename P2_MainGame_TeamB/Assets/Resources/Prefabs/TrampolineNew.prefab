@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6395576655925992757}
   - component: {fileID: 6395576655925992758}
   - component: {fileID: 6395576655925992759}
+  - component: {fileID: 1723147449608390339}
   m_Layer: 0
   m_Name: TrampolineNew
   m_TagString: Untagged
@@ -238,6 +239,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1723147449608390339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6395576655925992744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a18af803be4fc34ba66ed3db328771d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6395576656245958232
 GameObject:
   m_ObjectHideFlags: 0
