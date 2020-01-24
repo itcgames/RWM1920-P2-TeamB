@@ -12,23 +12,23 @@ namespace P3.HighScores
         [SerializeField] public float m_timer;
         public Text m_timerText;
         private bool m_isTimerActive;
-
+        void Awake()
+        {
+            DontDestroyOnLoad(this.gameObject);
+            if (GameObject.Find(gameObject.name) &&
+                GameObject.Find(gameObject.name) !=
+                this.gameObject)
+            {
+                Destroy(GameObject.Find(this.gameObject.name));
+            }
+        }
 
 
         void Start()
         {
             m_isTimerActive = true;
         }
-        void Awake()
-        {
-            DontDestroyOnLoad(gameObject);
-            if (GameObject.Find(gameObject.name) &&
-                GameObject.Find(gameObject.name) !=
-                this.gameObject)
-            {
-                Destroy(GameObject.Find(gameObject.name));
-            }
-        }
+
         void Update()
         {
             if (m_isTimerActive)
@@ -37,6 +37,7 @@ namespace P3.HighScores
                 m_timerText.text = "Timer:" + m_timer.ToString("f0");
 
             }
+            
         }
     }
 }
