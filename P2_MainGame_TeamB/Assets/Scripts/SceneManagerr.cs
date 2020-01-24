@@ -29,8 +29,9 @@ public class SceneManagerr : MonoBehaviour
     private float m_startPosY;
     Vector3 m_mousePos;
     bool m_paused;
+    public bool start = false;
 
-    
+
     void OnEnable()
     {
        
@@ -149,10 +150,16 @@ public class SceneManagerr : MonoBehaviour
             if (t_buttonPressed == m_pauseButton)
             {
                 Time.timeScale = 1;
+                start = true;
                 Debug.Log("Clicked: " + m_pauseButton.name);
                 m_paused = false;
             }
         }
     }
-       
+
+    public bool startCheck()
+    {
+        return start;
+    }
+
 }
